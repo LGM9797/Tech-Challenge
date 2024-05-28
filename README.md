@@ -1,15 +1,15 @@
-Tech Challenge FIAP - MLET 2024
+<h1>Tech Challenge FIAP - MLET 2024</h1>
 
-Bruno Vieira Ramos RM 356125
+<h3>Bruno Vieira Ramos RM 356125
 
-Lucas Garcia Monteiro RM 354900
+<h3>Lucas Garcia Monteiro RM 354900
 
 ===========================================
 
 
-Tech Challenge - Criar uma API pública que consome os dados disponibilizados em: http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_01
+<h2>Tech Challenge - Criar uma API pública que consome os dados disponibilizados em: http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_01
 
-Objetivos: 
+Objetivos: </h2>
 
 1 - Criar uma Rest API, em Python, que faça consultas no site da Embrapa;
 
