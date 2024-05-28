@@ -54,14 +54,29 @@ def baixar_arquivos_csv(lista_urls, diretorio_saida):
         else:
             print("Falha ao baixar o arquivo. Status code:", response.status_code)
 
-def csv_para_json(arquivo_entrada, arquivo_saida):
-    df = pd.read_csv(arquivo_entrada,sep=';',header=None)
-    df_fillna_zero = df.fillna(0)
-    dados_dicionario = df_fillna_zero.to_dict(orient='records')
-    objeto_json = json.dumps(dados_dicionario, indent=4)
+def csv_para_json(csv_file, json_file):
+    """Converte um arquivo CSV para JSON.
 
-    with open(arquivo_saida, 'w') as arquivo:
-        arquivo.write(objeto_json)
+    Args:
+        csv_file (str): O caminho para o arquivo CSV.
+        json_file (str): O caminho para o arquivo JSON de saída.
+    """
+
+    data = []
+    with open(csv_file, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter=';')
+        for row in reader:
+            # Converte os valores numéricos para inteiros
+            for key, value in row.items():
+                if key != 'produto' and key != 'cultivar' and key != 'País':
+                    try:
+                        row[key] = int(value)
+                    except ValueError:
+                        pass  # Deixa como string se não for um número
+            data.append(row)
+
+    with open(json_file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4)
 
 def inicio():
 
@@ -71,4 +86,4 @@ def inicio():
     for i,j in zip(diretorio_CSV, diretorio_JSON):
         csv_para_json(i, j)
 
-inicio()
+# inicio()
