@@ -86,4 +86,9 @@ def inicio():
     for i,j in zip(diretorio_CSV, diretorio_JSON):
         csv_para_json(i, j)
 
-# inicio()
+# def comercio_id(id: int):
+#     valores = open('Repository_JSON/Comercio.json')
+#     data = json.load(valores)
+#     return data[id]
+
+# print(comercio_id(5))

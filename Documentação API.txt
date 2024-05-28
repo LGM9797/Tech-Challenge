@@ -1,0 +1,559 @@
+
+Esta API fornece acesso aos dados contidos em arquivos JSON, gerados a partir de arquivos CSV referentes à produção e comercialização de vinhos e uvas no Brasil.
+
+Base URL: http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_01
+Framework: FastAPI
+Formato de dados: JSON
+
+
+
+<h1>Endpoints</h1>
+
+1. <h2>Comércio</h2>
+Base URL: /Comercio
+GET **/Comercio**: Retorna todos os dados sobre o comércio de vinho e uva.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "id": 1,
+    "control": "VINHO DE MESA",
+    "produto": "VINHO DE MESA",
+    "1970": 217208604,
+    "1971": 154264651,
+    "1972": 146953297,
+    "1973": 116710345,
+    "1974": 193875345,
+    "1975": 177401209,
+    ...]
+
+GET **/Comercio/{id}**: Retorna os dados sobre o comércio de vinho e uva para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+{
+    "id": 1,
+    "control": "VINHO DE MESA",
+    "produto": "VINHO DE MESA",
+    "1970": 217208604,
+    "1971": 154264651,
+    "1972": 146953297,
+    "1973": 116710345,
+    "1974": 193875345,
+    "1975": 177401209,
+    ...]
+
+
+2. <h2>Exportação</h2>
+
+Base URL: /Exportação
+GET **/Exportação/Espumantes**: Retorna todos os dados sobre a exportação de espumantes.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Exportação/Espumantes/{id}:** Retorna todos os dados sobre a exportação de espumantes para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Exportação/Suco**: Retorna todos os dados sobre a exportação de Suco.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Exportação/Suco/{id}:** Retorna os dados sobre o comércio de Suco para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Exportação/Uva**: Retorna todos os dados sobre a exportação de Uva.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Exportação/Uva/{id}:** Retorna os dados sobre o comércio de Uva para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+
+GET **/Exportação/Vinho**: Retorna todos os dados sobre a exportação de Vinho.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Exportação/Vinho/{id}:** Retorna os dados sobre o comércio de Vinho para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+3. <h2>Importacação</h2>
+
+Base URL: /Importação
+
+
+GET **/Importação/Espumantes**: Retorna todos os dados sobre a Importação de espumantes.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Importação/Espumantes/{id}:** Retorna os dados sobre o comércio de Espumante para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Importação/Frescas**: Retorna todos os dados sobre a Importação de Uvas Frescas.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Importação/Frescas/{id}:** Retorna os dados sobre o comércio de Uvas Frescas para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Importação/Passas**: Retorna todos os dados sobre a Importação de Uvas Passas.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Importação/Passas/{id}:** Retorna os dados sobre o comércio de Uvas Passas para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Importação/Suco**: Retorna todos os dados sobre a Importação de Suco.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Importação/Suco/{id}:** Retorna os dados sobre o comércio de Suco para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+
+GET **/Importação/Vinhos**: Retorna todos os dados sobre a Importação de Vinhos.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Importação/Vinhos/{id}:** Retorna os dados sobre o comércio de Vinhos para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+3. <h2>Processamento</h2>
+
+Base URL: /Processa
+
+GET **/Processa/Americanas**: Retorna todos os dados sobre Processamento de Americanas.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Processa/Americanas/{id}:** Retorna os dados sobre o Processamento de Americanas para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Processa/Mesa**: Retorna todos os dados sobre Processamento de Mesa.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Processa/Mesa/{id}:** Retorna os dados sobre o Processamento de Mesa para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Processa/Semclass**: Retorna todos os dados sobre Processamento de SemClasse.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Processa/Semclass/{id}:** Retorna os dados sobre o Processamento de SemClasse para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+GET **/Processa/Viniferas**: Retorna todos os dados sobre Processamento de Viniferas.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Processa/Viniferas/{id}:** Retorna os dados sobre o Processamento de Viniferas para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
+
+
+4. <h2>Produção</h2>
+
+Base URL: /Produção
+
+GET **/Producao**: Retorna todos os dados sobre Produção.
+
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    ...]
+
+GET **/Producao/{id}:** Retorna os dados sobre a Produção para o id especificado.
+
+Parâmetros:
+id (int): ID do registro a ser retornado.
+Resposta:
+Formato: JSON
+Exemplo:
+[
+  {
+    "Id": 1,
+    "País": "África do Sul",
+    "1970": 21341,
+    "1971": 234567,
+    "1972": 887684,
+    "1973": 3408657,
+    "1974": 9785,
+    "id":1
+    ]
